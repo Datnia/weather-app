@@ -6,7 +6,14 @@ class Input extends Component {
     this.state = {};
   }
   render() {
-    return <input type="text" />;
+    return (
+      <div>
+        <form onSubmit={this.props.loadWeather}>
+          <input type="text" name="zip" placeholder="Enter Zip code" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    );
   }
 }
 
