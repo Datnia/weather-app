@@ -4,7 +4,6 @@ class Weather extends Component {
   render() {
     const temp = {
       fontSize: 110,
-      marginTop: 40,
       fontWeight: 400
     };
 

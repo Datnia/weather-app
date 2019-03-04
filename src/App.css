@@ -10,12 +10,12 @@
 .App {
   text-align: center;
   margin: 0 auto;
-  width: 40%;
-  padding: 30px 0;
+  width: 35%;
+  padding: 0;
 }
 
 h1 {
-  margin: 10px 0 30px;
+  margin: 5px 0 30px;
 }
 
 h2 {
@@ -43,7 +43,7 @@ input {
   vertical-align: bottom;
   align-items: flex-end;
   border: none;
-  border-bottom: 1px black solid;
+  border-bottom: 2px rgb(46, 46, 46) solid;
 }
 
 input:focus {
@@ -52,9 +52,14 @@ input:focus {
 }
 
 button {
-  background-color: rgb(46, 46, 46);
-  border: none;
+  background-color: white;
+  border: rgb(46, 46, 46) 2px solid;
   font-size: 10px;
-  color: white;
+  color: rgb(46, 46, 46);
   padding: 5px;
+}
+
+img {
+  width: 50%;
+  margin: 15px 0 0;
 }
