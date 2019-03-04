@@ -14,6 +14,7 @@ class App extends Component {
       tempHigh: "",
       tempLow: "",
       humidity: "",
+      scale: "",
       error: ""
     };
   }
@@ -26,14 +27,42 @@ class App extends Component {
     );
     const response = await api_call.json();
     console.log(response);
-    this.setState({
-      city: response.name,
-      description: response.weather[0].main,
-      temperature: Math.round(response.main.temp) + "°F",
-      tempHigh: Math.round(response.main.temp_max) + "°F",
-      tempLow: Math.round(response.main.temp_min) + "°F",
-      humidity: "Humidity:" + response.main.humidity
-    });
+    let f = "°F";
+
+    if (zip && response.cod !== "404") {
+      this.setState({
+        city: response.name,
+        description: response.weather[0].main,
+        temperature: Math.round(response.main.temp),
+        tempHigh: "Hi: " + Math.round(response.main.temp_max) + "°F |",
+        tempLow: "Low: " + Math.round(response.main.temp_min) + "°F",
+        humidity: "Humidity: " + response.main.humidity + "%",
+        scale: f,
+        error: ""
+      });
+    } else if (response.cod === "400") {
+      this.setState({
+        city: "",
+        description: "",
+        temperature: "",
+        tempHigh: "",
+        tempLow: "",
+        humidity: "",
+        scale: "",
+        error: "Please enter a valid zip code"
+      });
+    } else {
+      this.setState({
+        city: "",
+        description: "",
+        temperature: "",
+        tempHigh: "",
+        tempLow: "",
+        humidity: "",
+        scale: "",
+        error: "Please enter a valid zip code"
+      });
+    }
   };
   render() {
     return (
@@ -47,6 +76,8 @@ class App extends Component {
           tempHigh={this.state.tempHigh}
           tempLow={this.state.tempLow}
           humidity={this.state.humidity}
+          scale={this.state.scale}
+          error={this.state.error}
         />
       </div>
     );

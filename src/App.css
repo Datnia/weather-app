@@ -3,20 +3,58 @@
 * {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
   text-align: center;
   margin: 0 auto;
-  width: fit-content;
+  width: 40%;
+  padding: 30px 0;
+}
+
+h1 {
+  margin: 10px 0 30px;
 }
 
 h2 {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 p {
   margin: 0;
   font-weight: 200;
   font-size: 14px;
+}
+
+.tempHiLow {
+  margin: 15px 0 0;
+}
+
+.entry {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+input {
+  vertical-align: bottom;
+  align-items: flex-end;
+  border: none;
+  border-bottom: 1px black solid;
+}
+
+input:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  background-color: rgb(46, 46, 46);
+  border: none;
+  font-size: 10px;
+  color: white;
+  padding: 5px;
 }
