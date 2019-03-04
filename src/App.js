@@ -69,8 +69,14 @@ class App extends Component {
       background = rain;
     } else if (this.state.description === "Clouds") {
       background = cloudy;
+    } else if (this.state.description === "Thunderstorm") {
+      background = tstorm;
+    } else if (this.state.description === "Windy") {
+      background = windy;
     } else if (this.state.description === "Snow") {
       background = snow;
+    } else if (this.state.description === "Partly cloudy") {
+      background = partlycloudy;
     } else {
       background =
         "http://probablyprogramming.com/wp-content/uploads/2009/03/handtinywhite.gif";
