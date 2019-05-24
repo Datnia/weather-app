@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+#root {
+  zoom: 175%;
+}
+
 .App {
   text-align: center;
   margin: 0 auto;
